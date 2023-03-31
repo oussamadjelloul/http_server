@@ -26,6 +26,7 @@ const server = http.createServer((req, res) => {
   if (req.method == "GET") {
     var fileURL;
     if (req.url == "/") fileURL = "/index.html";
+    else if (req.url == "/about") fileURL = "/about.html";
     else fileURL = req.url;
     var filePath = path.resolve("./public" + fileURL);
     const fileExt = path.extname(filePath);
